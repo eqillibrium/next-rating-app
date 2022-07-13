@@ -1,10 +1,12 @@
 import { NextPage } from 'next';
-import { Button } from '../components'
+import { Rating } from '../components';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [rating, setRating] = useState<number>(4);
   return (
     <main>
-      <Button appearance='primary' arrow='right'>Кнопка</Button>
+      <Rating rating={rating} setRating={setRating} isEditable/>
     </main>
   );
 };
